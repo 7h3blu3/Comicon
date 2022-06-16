@@ -1,0 +1,77 @@
+  <nav class="navbar navbar-expand-lg navbar-dark  bg-dark fixed-top">
+  
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img class="deadpool-img" src="../../assets/deadpool-icon-png-6878-Windows.ico"></a>
+      <!-- <span class="spacer"></span> -->
+      
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+        <span class="navbar-toggler-icon"></span>
+			</button>
+      <!-- <a class="navbar-brand navbar-right" href="#">Navbar</a>
+      <a class="navbar-brand" href="#tryThis" [ngClass]="{'navbar-brand-if-active':currentSection=='Comicon'}" >Comicon</a>
+      <a class="navbar-brand" href="#tryThis" [ngClass]="{'navbar-brand-if-active':currentSection=='Gallery'}" >Gallery</a>
+      <a class="navbar-brand" href="#tryThis" [ngClass]="{'navbar-brand-if-active':currentSection=='About'}" >About</a>
+      <a class="navbar-brand" href="#tryThis" [ngClass]="{'navbar-brand-if-active':currentSection=='WooshAnimations'}" >WooshAnimations</a> -->
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="nav navbar-nav ms-auto mb-2 mb-lg-0 navbar-right">
+          <!-- <li class="nav-item"><a class="navbar-brand" href="#tryThis" [ngClass]="{'navbar-brand-if-active':currentSection=='Comicon'}" >Comicon</a> </li>
+          <li class="nav-item"><a class="navbar-brand" href="#tryThis" [ngClass]="{'navbar-brand-if-active':currentSection=='Gallery'}" >Gallery</a> </li>
+          <li class="nav-item"><a class="navbar-brand" href="#tryThis" [ngClass]="{'navbar-brand-if-active':currentSection=='About'}" >About</a> </li>
+          <li class="nav-item"><a class="navbar-brand" href="#tryThis" [ngClass]="{'navbar-brand-if-active':currentSection=='WooshAnimations'}" >WooshAnimations</a> </li> -->
+          <a class="navbar-brand" (click)="scrollToElement(Comicon)" [ngClass]="{'navbar-brand-if-active':currentSection=='Comicon'}" >Comicon</a>
+          <a class="navbar-brand" (click)="scrollToElement(Gallery)" [ngClass]="{'navbar-brand-if-active':currentSection=='Gallery'}" >Gallery</a>
+          <a class="navbar-brand" (click)="scrollToElement(About)" [ngClass]="{'navbar-brand-if-active':currentSection=='About'}" >About</a>
+          <a class="navbar-brand" (click)="scrollToElement(WooshAnimations)" [ngClass]="{'navbar-brand-if-active':currentSection=='WooshAnimations'}" >WooshAnimations</a>
+          <a class="navbar-brand" (click)="scrollToElement(mustWork)" [ngClass]="{'navbar-brand-if-active':currentSection=='WooshAnimations'}" >WooshAnimations</a>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+<div id="Comicon" #Comicon>
+  <app-comicon></app-comicon>
+</div>
+<div id="Gallery" #Gallery>
+  <div class="background-image">
+    <div class="container">
+        <div class="row" style="text-align: center;">
+            <div class="col-4">
+                <app-iron-man-float [imgSrc]="'../../../assets/iron-man-1.png'">
+                </app-iron-man-float>
+            </div>
+            <div class="col-4">
+                <app-spidey-float [imgSrc]="'../../../assets/sp-2.png'">
+                </app-spidey-float>
+            </div>
+            <div class="col-4">
+              <!-- <app-hulk-float style="cursor:pointer" [imgSrc]="'../../../assets/hulk-3.png'" > -->
+                <app-hulk-float style="cursor:pointer" (click)="scrollToElement(mustWork)" [imgSrc]="'../../../assets/hulk-3.png'">
+                </app-hulk-float>
+            </div>  
+        </div>
+    </div>
+</div>
+  <app-gallery></app-gallery>
+</div>
+
+<div id="About" #About>
+  <app-about></app-about>
+</div>
+
+<div id="WooshAnimations" #WooshAnimations>
+  <app-test></app-test>
+</div>
+
+<div>
+  <app-iron-man></app-iron-man>
+</div>
+
+<div>
+  <app-spider-man></app-spider-man>
+</div>
+
+<div id="mustWork" #mustWork>
+  <app-hulk-dialog *ngIf="hulkDialogBoolean"></app-hulk-dialog>
+</div>

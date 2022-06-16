@@ -1,0 +1,38 @@
+
+@keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+        border: 5px rgb(255, 255, 255) solid;
+		transform: translatey(0px);
+		// transform: scale(1.00) translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+        // border: 5px rgb(20, 153, 146) solid;
+        border: 5px rgb(2, 88, 31) solid;
+		transform: translatey(-20px);
+		// transform: scale(1.20) translatey(-20px) ;
+
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+        border: 5px rgb(255, 255, 255) solid;
+		transform: translatey(0px);
+		// transform: scale(1.00) translatey(0px);
+
+	}
+}
+
+.avatar {
+    display: inline-block;
+	width: 150px;
+	height: 150px;
+	box-sizing: border-box;
+	border: 5px rgb(255, 255, 255) solid;
+	border-radius: 50%;
+	overflow: hidden;
+	box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+	transform: translatey(0px);
+	animation: float 6s ease-in-out infinite;
+	img { width: 100%; height: auto; }
+}

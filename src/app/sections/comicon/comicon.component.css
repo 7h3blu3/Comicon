@@ -1,0 +1,45 @@
+::ng-deep .my-class .mat-dialog-container{
+    background-image: url("../../../assets/bg-1.jpg");
+    border-radius: 20px;
+    /* background: lightcyan; */
+    font-family: Papyrus,fantasy;
+    font-style: normal;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: .9rem;
+    letter-spacing: .15rem;
+    transition: transform .4s;
+    color: #ffffff;
+  }
+
+  .landing {
+    position: relative;
+    width: 100%;
+    height: 95vh;
+    display: table;
+    z-index: -1;
+  }
+  .home-wrap {
+    clip: rect(0, auto, auto, 0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .home-inner {
+    background-image: url("../../../assets/backround.png");
+    /* background-color: rgba(0,0,0, 0.4); */
+
+    position: fixed;
+    display: table;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    will-change: transform;
+  }
