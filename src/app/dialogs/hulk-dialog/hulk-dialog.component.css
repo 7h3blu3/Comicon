@@ -4,16 +4,20 @@
     /* background-size: 1080px; */
     height: 95vh;
     width: 100%;
-    background-image: url("../../../assets/hulk-bg.jpg");
+    /* background-image: url("../../../assets/hulk-bg.jpg"); */
 }
 
 .wrapper {
     display: grid;
     grid-gap: 10px;
-    grid-template-columns: repeat(2, 1fr);
+    /* grid-template-columns: repeat(1fr, 2); */
+    grid-template-columns: 1fr 3 1fr;
+    /* grid-template-rows: 100px 200px; */
     grid-auto-rows: 1fr;
-    max-width: 98%;
+    max-width: 85%;
+    height: 100vh;
     font-size: 0;
+    margin: auto;
   }
   
   .hero-item,
@@ -25,37 +29,47 @@
   
   .news-item {
     display: inline-block;
-    min-height: 400px;
-    /* max-height: 200px; */
+    min-height: 200px;
+    max-height: 200px;
     width: 50%;
   }
+
+  /* .news-item {
+    display: inline-block;
+    min-height: 400px;
+    width: 50%;
+  } */
   
   .hero-item {
     background-image: url('../../../assets/hulk-1.png');
+    min-height: 300px;
+    max-height: 340px;
+    
   }
   
   .standard-item:nth-child(2) {
     background-image: url('../../../assets/hulk-2.png');
-    /* height: 45vh; */
-    width: 100%;
+    min-height: 300px;
   }
   
   .standard-item:nth-child(3) {
     background-image: url('../../../assets/hulk-3.jpg');
+    min-height: 200px;
   }
   
   .standard-item:nth-child(4) {
     background-image: url('../../../assets/hulk-bruce.png');
-  
-    
+    min-height: 320px;
   }
   .standard-item:hover{
     transform: scale(1.2);
   }
 
-  /* .standard-item:nth-child(5) {
-    background-image: url('../../../assets/hulk-3.png');
-  } */
+  .standard-item:nth-child(5) {
+    background-image: url('../../../assets/hulk-6.png');
+    min-height: 125px;
+    max-height: 125px;
+  }
   
   @supports (display: grid) {
     .news-item {
@@ -63,27 +77,43 @@
       min-height: 0;
     }
     
+    /* .hero-item {
+      grid-column: 1 / span 2;
+      grid-row: 1 / 50;
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 75px), 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% calc(100% - 75px), 0 100%);
+    } */
+
     .hero-item {
       grid-column: 1 / span 2;
       grid-row: 1 / 50;
       -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 75px), 0 100%);
       clip-path: polygon(0 0, 100% 0, 100% calc(100% - 75px), 0 100%);
+      margin-top: 80px;
     }
   
-    .standard-item:nth-child(2) {
+    /* .standard-item:nth-child(2) {
       grid-column: 1 / span 1;
       grid-row: 50 / 100;
       -webkit-clip-path: polygon(0 14%, 0 86%, 90% 81%, 100% 6%);
       clip-path: polygon(0 14%, 0 86%, 90% 81%, 100% 6%);
       margin-top: -73px;
-    }
+    } */
   
+    .standard-item:nth-child(2) {
+      grid-column: 1 / span 1;
+      grid-row: 50 / 100;
+      -webkit-clip-path: polygon(0 11%, 0 79%, 90% 60%, 100% 7%);
+      clip-path: polygon(0 11%, 0 79%, 90% 60%, 100% 7%);
+      margin-top: -95px;
+    }
+
     .standard-item:nth-child(3) {
       grid-column: 2 / span 1;
       grid-row: 50 / 100;
-      -webkit-clip-path: polygon(13% 6%, 4% 84%, 100% 100%, 100% 0%);
-      clip-path: polygon(13% 6%, 4% 84%, 100% 100%, 100% 0%);
-      margin-top: -73px;
+      -webkit-clip-path: polygon(13% 6%, 5% 84%, 100% 100%, 100% 0%);
+      clip-path: polygon(13% 6%, 4.2% 84.5%, 100% 100%, 100% 0%);
+      margin-top: -86px;
       margin-left: -15%;
       margin-bottom: 18px;
     }
@@ -96,21 +126,34 @@
       margin-top: -107px;
     } */
 
-    
-    /* .standard-item:nth-child(5) {
-        grid-column: 1 / span 2;
-        grid-row: 100 / 150;
-        -webkit-clip-path: polygon(45% 0, 100% 15%, 100% 100%, 0 100%, 0 5%);
-        clip-path: polygon(45% 0, 100% 15%, 100% 100%, 0 100%, 0 5%);
-        margin-top: -107px;
-      } */
-
       .standard-item:nth-child(4) {
         grid-column: 1 / span 2;
         grid-row: 100 / 150;
+        -webkit-clip-path: polygon(45% 0, 100% 15%, 100% 100%, 0 100%, 0 5%, 0 5%);
+        clip-path: polygon(
+          45% 0%, 
+          100% 10%, 
+          100% 89%, 
+          27% 100%, 
+          0 89%, 
+          0 19%);
+        margin-top: -408px;
+      }
+
+      .standard-item:nth-child(5) {
+        grid-column: 1 / span 2;
+        grid-row: 100 / 150;
+        -webkit-clip-path: polygon(45% 0, 100% 15%, 100% 100%, 0 100%, 0 5%);
+        clip-path: polygon(40% 31, 100% 15%, 100% 100%, 0 100%, 0 100%);
+        margin-top: -187px;
+      }
+
+      .standard-item:nth-child(6) {
+        grid-column: 1 / span 2;
+        grid-row: 100 / 150;
         -webkit-clip-path: polygon(45% 0, 100% 15%, 100% 100%, 0 100%, 0 5%);
         clip-path: polygon(45% 0, 100% 15%, 100% 100%, 0 100%, 0 5%);
-        margin-top: -107px;
+        margin-top: -187px;
       }
   }
   
