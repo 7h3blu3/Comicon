@@ -2,16 +2,16 @@
     /* aspect-ratio: 1 / 1; */
     background-repeat: no-repeat;
     /* background-size: 1080px; */
-    height: 95vh;
+    height: 100vh;
     width: 100%;
-    /* background-image: url("../../../assets/hulk-bg.jpg"); */
+    background-image: url("../../../assets/hulk-bg.jpg");
 }
 
 .wrapper {
     display: grid;
     grid-gap: 10px;
     /* grid-template-columns: repeat(1fr, 2); */
-    grid-template-columns: 1fr 3 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     /* grid-template-rows: 100px 200px; */
     grid-auto-rows: 1fr;
     max-width: 85%;
@@ -20,7 +20,6 @@
     margin: auto;
   }
   
-  .hero-item,
   .standard-item {
     background-position: center center;
     background-repeat: no-repeat;
@@ -34,126 +33,113 @@
     width: 50%;
   }
 
-  /* .news-item {
-    display: inline-block;
-    min-height: 400px;
-    width: 50%;
-  } */
-  
-  .hero-item {
+  .standard-item:nth-child(1) {
     background-image: url('../../../assets/hulk-1.png');
-    min-height: 300px;
-    max-height: 340px;
-    
+    min-height: 200px;
+    max-height: 640px;
+    height: 120%; 
+    width: 110%;
   }
-  
+
   .standard-item:nth-child(2) {
     background-image: url('../../../assets/hulk-2.png');
     min-height: 300px;
   }
   
   .standard-item:nth-child(3) {
-    background-image: url('../../../assets/hulk-3.jpg');
+    background-image: url('../../../assets/hulk-3.png');
     min-height: 200px;
+    max-height: 340px;
   }
   
   .standard-item:nth-child(4) {
-    background-image: url('../../../assets/hulk-bruce.png');
+    background-image: url('../../../assets/hulk-4.png');
     min-height: 320px;
   }
+
+  .standard-item:nth-child(5) {
+    background-image: url('../../../assets/hulk-5.png');
+    min-height: 200px;
+    max-height: 340px;
+  }
+
+  .standard-item:nth-child(6) {
+    background-image: url('../../../assets/hulk-6.png');
+    min-height: 200px;
+    max-height: 505px;
+  }
+
+  .standard-item:nth-child(7) {
+    background-image: url('../../../assets/hulk-7.png');
+    min-height: 200px;
+    max-height: 540px;
+  }
+
   .standard-item:hover{
     transform: scale(1.2);
   }
 
-  .standard-item:nth-child(5) {
-    background-image: url('../../../assets/hulk-6.png');
-    min-height: 125px;
-    max-height: 125px;
-  }
-  
   @supports (display: grid) {
     .news-item {
       width: auto;
       min-height: 0;
     }
     
-    /* .hero-item {
-      grid-column: 1 / span 2;
+    .standard-item:nth-child(1) {
+      grid-column: 1 / span 1;
       grid-row: 1 / 50;
-      -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 75px), 0 100%);
-      clip-path: polygon(0 0, 100% 0, 100% calc(100% - 75px), 0 100%);
-    } */
-
-    .hero-item {
-      grid-column: 1 / span 2;
-      grid-row: 1 / 50;
-      -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 75px), 0 100%);
-      clip-path: polygon(0 0, 100% 0, 100% calc(100% - 75px), 0 100%);
+      -webkit-clip-path: polygon(0% 4%, 41% 1%, 100% 5%, 96% 40%, 82% 86%, 0% 96%);
+      clip-path: polygon(0% 4%, 41% 1%, 100% 5%, 96% 40%, 82% 86%, 0% 96%);
       margin-top: 80px;
     }
-  
-    /* .standard-item:nth-child(2) {
-      grid-column: 1 / span 1;
-      grid-row: 50 / 100;
-      -webkit-clip-path: polygon(0 14%, 0 86%, 90% 81%, 100% 6%);
-      clip-path: polygon(0 14%, 0 86%, 90% 81%, 100% 6%);
-      margin-top: -73px;
-    } */
-  
+
     .standard-item:nth-child(2) {
-      grid-column: 1 / span 1;
-      grid-row: 50 / 100;
-      -webkit-clip-path: polygon(0 11%, 0 79%, 90% 60%, 100% 7%);
-      clip-path: polygon(0 11%, 0 79%, 90% 60%, 100% 7%);
-      margin-top: -95px;
+      grid-column: 2 / span 1;
+      grid-row: 1 / 50;
+      -webkit-clip-path: polygon(55% 0%, 100% 0%, 100% 66%, 6% 76%, 9% 10%);
+      clip-path: polygon(55% 0%, 100% 0%, 100% 66%, 6% 76%, 9% 10%);
+      margin-top: 80px;
     }
 
     .standard-item:nth-child(3) {
       grid-column: 2 / span 1;
       grid-row: 50 / 100;
-      -webkit-clip-path: polygon(13% 6%, 5% 84%, 100% 100%, 100% 0%);
-      clip-path: polygon(13% 6%, 4.2% 84.5%, 100% 100%, 100% 0%);
-      margin-top: -86px;
+      -webkit-clip-path: polygon(18% 9%, 100% 1%, 100% 95%, 4% 86%);
+      clip-path: polygon(18% 9%, 100% 1%, 100% 95%, 4% 86%);
+      margin-top: -206px;
       margin-left: -15%;
       margin-bottom: 18px;
     }
   
-    /* .standard-item:nth-child(4) {
-      grid-column: 2 / span 2;
+    .standard-item:nth-child(4) {
+      grid-column: 1 / span 2;
       grid-row: 100 / 150;
-      -webkit-clip-path: polygon(45% 0, 100% 15%, 100% 100%, 0 100%, 0 5%);
-      clip-path: polygon(45% 0, 100% 15%, 100% 100%, 0 100%, 0 5%);
-      margin-top: -107px;
-    } */
+      -webkit-clip-path: polygon(45% 0%, 100% 10%, 100% 89%, 27% 100%, 0 89%, 0 19%);
+      clip-path: polygon(45% 0%, 100% 10%, 100% 89%, 27% 100%, 0 89%, 0 19%);
+      margin-top: -408px;
+    }
 
-      .standard-item:nth-child(4) {
-        grid-column: 1 / span 2;
-        grid-row: 100 / 150;
-        -webkit-clip-path: polygon(45% 0, 100% 15%, 100% 100%, 0 100%, 0 5%, 0 5%);
-        clip-path: polygon(
-          45% 0%, 
-          100% 10%, 
-          100% 89%, 
-          27% 100%, 
-          0 89%, 
-          0 19%);
-        margin-top: -408px;
-      }
+    .standard-item:nth-child(5) {
+      grid-column: 3 / span 2;
+      grid-row: 1 / 50;
+      -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
+      clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
+      margin-top: 80px;
+    }
 
-      .standard-item:nth-child(5) {
-        grid-column: 1 / span 2;
-        grid-row: 100 / 150;
-        -webkit-clip-path: polygon(45% 0, 100% 15%, 100% 100%, 0 100%, 0 5%);
-        clip-path: polygon(40% 31, 100% 15%, 100% 100%, 0 100%, 0 100%);
-        margin-top: -187px;
-      }
+    .standard-item:nth-child(6) {
+      grid-column: 3 / span 1;
+      grid-row: 100 / 40;
+      -webkit-clip-path: polygon(0% 6.4%, 100% 0%, 100% 89%, 52% 96%, 0% 93.5%);
+      clip-path: polygon(0% 6.4%, 100% 0%, 100% 89%, 52% 96%, 0% 93.5%);
+      margin-top: 5px;
+    }
 
-      .standard-item:nth-child(6) {
-        grid-column: 1 / span 2;
-        grid-row: 100 / 150;
-        -webkit-clip-path: polygon(45% 0, 100% 15%, 100% 100%, 0 100%, 0 5%);
-        clip-path: polygon(45% 0, 100% 15%, 100% 100%, 0 100%, 0 5%);
-        margin-top: -187px;
-      }
+    .standard-item:nth-child(7) {
+      grid-column: 4 / span 1;
+      grid-row: 100 / 37;
+      -webkit-clip-path: polygon(0% 6.4%, 100% 0%, 100% 100%, 52% 100%, 0% 89.5%);
+      clip-path: polygon(0% 6.4%, 100% 0%, 100% 100%, 52% 100%, 0% 89.5%);
+    }
   }
   
