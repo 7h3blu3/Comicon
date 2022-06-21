@@ -1,8 +1,326 @@
 .background-image{
     /* aspect-ratio: 1 / 1; */
     background-repeat: no-repeat;
-    /* background-size: 1080px; */
-    height: 95vh;
+    background-size: fit-content;
+    height: 100vh;
     width: 100%;
     background-image: url("../../../assets/spider-man-bg.png");
 }
+
+.wrapper {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-auto-rows: 1fr;
+    max-width: 85%;
+    height: 100vh;
+    font-size: 0;
+    margin: auto;
+  }
+  
+  .standard-item {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 200px;
+    -webkit-clip-path: polygon(100% 0%, 100% 0, 100% 100%, 100% 100%);
+    clip-path: polygon(100% 0%, 100% 0, 100% 100%, 100% 100%);
+  }
+  
+  .news-item {
+    display: inline-block;
+    min-height: 200px;
+    max-height: 200px;
+    width: 50%;
+  }
+
+  /* Part of position 1 */
+  .standard-item:nth-child(1) {
+    background-image: url('../../../assets/spider-man-1.png');
+    min-height: 200px;
+    max-height: 640px;
+    height: 110%; 
+    width: 100%;
+    animation: leftToRight 30s ease-in infinite;
+  }
+  /* Part of position 1 */
+  .standard-item:nth-child(2) {
+    background-image: url('../../../assets/spider-man-2.png');
+    min-height: 200px;
+    max-height: 640px;
+    height: 110%; 
+    width: 100%;
+    animation: rightToLeftToUpperRight 30s ease-in infinite 10s;
+  }
+  /* Part of position 1 */
+  .standard-item:nth-child(3) {
+    background-image: url('../../../assets/spider-man-3.png');
+    min-height: 200px;
+    max-height: 640px;
+    height: 110%; 
+    width: 100%;
+    animation: bottomLeftToRight 30s ease-in infinite 20s;
+  }
+  /* Part of position 2 */
+  .standard-item:nth-child(4) {
+    background-image: url('../../../assets/spider-man-4.png');
+    min-height: 200px;
+    max-height: 640px;
+    height: 110%; 
+    width: 100%;
+    animation: upperLeftToBottomRight 30s ease-in infinite 20s;
+  }
+  /* Part of position 2 */
+  .standard-item:nth-child(5) {
+    background-image: url('../../../assets/spider-man-5.png');
+    min-height: 200px;
+    max-height: 640px;
+    height: 110%; 
+    width: 100%;
+    animation: bottomRightToUpperLeft 30s ease-in infinite 30s;
+  }
+  /* Part of position 2 */
+  .standard-item:nth-child(6) {
+    background-image: url('../../../assets/spider-man-6.png');
+    min-height: 200px;
+    max-height: 640px;
+    height: 110%; 
+    width: 100%;
+    animation: bottomRightToUpperLeft 30s ease-in infinite 40s;
+  }
+  /* Part of position 3 */
+  .standard-item:nth-child(7) {
+    background-image: url('../../../assets/spider-man-7.png');
+    min-height: 200px;
+    max-height: 640px;
+    height: 110%; 
+    width: 100%;
+    animation: bottomRightToUpperLeft 30s ease-in infinite 20s;
+  }
+
+  /* Part of position 3 */
+  .standard-item:nth-child(8) {
+    background-image: url('../../../assets/spider-man-8.png');
+    min-height: 200px;
+    max-height: 640px;
+    height: 110%; 
+    width: 100%;
+    animation: upperLeftToBottomRight 30s ease-in infinite 30s;
+  }
+
+  /* Part of position 3 */
+  .standard-item:nth-child(9) {
+    background-image: url('../../../assets/spider-man-9.png');
+    min-height: 200px;
+    max-height: 640px;
+    height: 110%; 
+    width: 100%;
+    animation: upperLeftToBottomRight 30s ease-in infinite 40s;
+  }
+  /* Part of position 4 */
+  .standard-item:nth-child(10) {
+    background-image: url('../../../assets/spider-man-10.png');
+    min-height: 200px;
+    max-height: 640px;
+    height: 110%; 
+    width: 100%;
+    animation: leftToUpperRight 30s ease-in infinite 10s;
+  }
+  /* Part of position 4 */
+  .standard-item:nth-child(11) {
+    background-image: url('../../../assets/spider-man-11.png');
+    min-height: 200px;
+    max-height: 640px;
+    height: 110%; 
+    width: 100%;
+    animation: upperRightToLeft 30s ease-in infinite 20s;
+  }
+  /* Part of position 4 */
+  .standard-item:nth-child(12) {
+    background-image: url('../../../assets/spider-man-12.png');
+    min-height: 200px;
+    max-height: 640px;
+    height: 110%; 
+    width: 100%;
+    animation: rightToLeft 30s ease-in infinite 30s;
+  }
+
+  @supports (display: grid) {
+    .news-item {
+      width: auto;
+      min-height: 0;
+    }
+    
+    .standard-item:nth-child(1) {
+      grid-column: 1 / span 1;
+      grid-row: 1 / 50;
+      border:solid 5px rgb(255, 255, 255);
+      border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+    }
+
+    .standard-item:nth-child(2) {
+      grid-column: 1 / span 1;
+      grid-row: 1 / 50;
+      border:solid 5px rgb(255, 255, 255);
+      border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+    }
+
+    .standard-item:nth-child(3) {
+      grid-column: 1 / span 1;
+      grid-row: 1 / 50;
+      border:solid 5px rgb(255, 255, 255);
+      border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+    }
+
+    .standard-item:nth-child(4) {
+      grid-column: 2 / span 1;
+      grid-row: 1 / 50;
+      border:solid 5px rgb(255, 255, 255);
+      border-radius: 20px 15px 20px 10px/10px 20px 200px 25px;
+    }
+
+    .standard-item:nth-child(5) {
+      grid-column: 2 / span 1;
+      grid-row: 1 / 50;
+      border:solid 5px rgb(255, 255, 255);
+      border-radius: 20px 15px 20px 10px/10px 20px 200px 25px;
+    }
+
+    .standard-item:nth-child(6) {
+      grid-column: 2 / span 1;
+      grid-row: 1 / 50;
+      border:solid 5px rgb(255, 255, 255);
+      border-radius: 20px 15px 20px 10px/10px 20px 200px 25px;
+    }
+
+    .standard-item:nth-child(7) {
+      grid-column: 3 / span 1;
+      grid-row: 1 / 50;
+      border:solid 5px rgb(255, 255, 255);
+      border-radius: 255px 10px 225px 10px/10px 225px 20px 255px;
+    }
+
+    .standard-item:nth-child(8) {
+      grid-column: 3 / span 1;
+      grid-row: 1 / 50;
+      border:solid 5px rgb(255, 255, 255);
+      border-radius: 255px 10px 225px 10px/10px 225px 20px 255px;
+    }
+
+    .standard-item:nth-child(9) {
+      grid-column: 3 / span 1;
+      grid-row: 1 / 50;
+      border:solid 5px rgb(255, 255, 255);
+      border-radius: 255px 10px 225px 10px/10px 225px 20px 255px;
+    }
+
+    .standard-item:nth-child(10) {
+      grid-column: 4 / span 1;
+      grid-row: 1 / 50;
+      border:solid 5px rgb(255, 255, 255);
+      border-radius: 255px 10px 225px 10px/10px 225px 20px 255px;
+    }
+
+    .standard-item:nth-child(11) {
+      grid-column: 4 / span 1;
+      grid-row: 1 / 50;
+      border:solid 5px rgb(255, 255, 255);
+      border-radius: 255px 10px 225px 10px/10px 225px 20px 255px;
+    }
+
+    .standard-item:nth-child(12) {
+      grid-column: 4 / span 1;
+      grid-row: 1 / 50;
+      border:solid 5px rgb(255, 255, 255);
+      border-radius: 255px 10px 225px 10px/10px 225px 20px 255px;
+    }
+}
+
+   @keyframes bottomLeftToUpperRight {
+    0%  {clip-path: polygon(0% 100%, 0% 100%, 0% 100%, 0% 100%);}
+    8.33% {clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0% 100%);}
+    33.33% {clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0% 100%);}
+    41.66%{clip-path: polygon(0% 100%, 0% 100%, 0% 100%, 0% 100%);}
+    50%{clip-path: polygon(0% 100%, 0% 100%, 0% 100%, 0% 100%);}
+  }
+
+  @keyframes bottomLeftToRight {
+    0%  {clip-path: polygon(0% 100%, 0% 100%, 0% 100%, 0% 100%);}
+    8.33% {clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0% 100%);}
+    33.33% {clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0% 100%);}
+    41.66%{clip-path: polygon(100% 0%, 100% 0, 100% 100%, 100% 100%);}
+    50%{clip-path: polygon(100% 0%, 100% 0, 100% 100%, 100% 100%);}
+  }
+  
+  @keyframes bottomRightToUpperLeft {
+    0%  {clip-path: polygon(100% 100%, 100% 100%, 100% 100%, 100% 100%);}
+    8.33% {clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0% 100%);}
+    33.33% {clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0% 100%);}
+    41.66%{clip-path: polygon(100% 100%, 100% 100%, 100% 100%, 100% 100%);}
+    50%{clip-path: polygon(100% 100%, 100% 100%, 100% 100%, 100% 100%);}
+  }
+
+   
+  @keyframes upperRightToLeft {
+    0%  {clip-path: polygon(100% 0%, 100% 0, 100% 0%, 100% 0%);}
+    8.33% {clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0% 100%);}
+    33.33% {clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0% 100%);}
+    41.66%{clip-path: polygon(0% 0%, 0% 0, 0% 100%, 0% 100%);}
+    50%{clip-path: polygon(0% 0%, 0% 0, 0% 100%, 0% 100%);}
+  }
+
+  @keyframes upperRightToBottomLeft {
+    0%  {clip-path: polygon(100% 0%, 100% 0, 100% 0%, 100% 0%);}
+    8.33% {clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0% 100%);}
+    33.33% {clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0% 100%);}
+    41.66%{clip-path: polygon(100% 0%, 100% 0, 100% 0%, 100% 0%); }
+    50%{clip-path: polygon(100% 0%, 100% 0, 100% 0%, 100% 0%);}
+  }
+
+  @keyframes upperLeftToBottomRight {
+    0%  {clip-path: polygon(0% 0%, 0% 0, 0% 0%, 0% 0%);}
+    8.33% {clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0% 100%);}
+    33.33% {clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0% 100%);}
+    41.66%{clip-path: polygon(0% 0%, 0% 0, 0% 0%, 0% 0%); }
+    50%{clip-path: polygon(0% 0%, 0% 0, 0% 0%, 0% 0%);}
+  }
+
+  @keyframes leftToRight {
+    0%  {clip-path: polygon(0% 0%, 0% 0, 0% 100%, 0% 100%);}
+    8.33% {clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0% 100%);}
+    33.33% {clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0% 100%);}
+    41.66%{clip-path: polygon(0% 0%, 0% 0, 0% 100%, 0% 100%); }
+    50%{clip-path: polygon(0% 0%, 0% 0, 0% 100%, 0% 100%);}
+  }
+
+  @keyframes leftToUpperRight {
+    0%  {clip-path: polygon(0% 0%, 0% 0, 0% 100%, 0% 100%);}
+    8.33% {clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0% 100%);}
+    33.33% {clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0% 100%);}
+    41.66%{clip-path: polygon(0% 100%, 0% 100%, 0% 100%, 0% 100%); }
+    50%{clip-path: polygon(0% 100%, 0% 100%, 0% 100%, 0% 100%);}
+  }
+
+  @keyframes leftToBottomRight {
+    0%  {clip-path: polygon(0% 0%, 0% 0, 0% 100%, 0% 100%);}
+    8.33% {clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0% 100%);}
+    33.33% {clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0% 100%);}
+    41.66%{clip-path: polygon(0% 0%, 0% 0, 0% 0%, 0% 0%); }
+    50%{clip-path: polygon(0% 0%, 0% 0, 0% 0%, 0% 0%);}
+  }
+
+  @keyframes rightToLeft {
+    0%  {clip-path: polygon(100% 0%, 100% 0, 100% 100%, 100% 100%);}
+    8.33% {clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0% 100%);}
+    33.33% {clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0% 100%);}
+    41.66%{clip-path: polygon(100% 0%, 100% 0, 100% 100%, 100% 100%);}
+    50%{clip-path: polygon(100% 0%, 100% 0, 100% 100%, 100% 100%);}
+  }
+
+  @keyframes rightToLeftToUpperRight {
+    0%  {clip-path: polygon(100% 0%, 100% 0, 100% 100%, 100% 100%);}
+    8.33% {clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0% 100%);}
+    33.33%  {clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0% 100%);}
+    41.66%{clip-path: polygon(100% 0%, 100% 0, 100% 0%, 100% 0%);}
+    50%{clip-path: polygon(100% 0%, 100% 0, 100% 100%, 100% 100%);}
+  }

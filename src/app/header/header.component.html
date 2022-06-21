@@ -23,7 +23,7 @@
           <a class="navbar-brand" (click)="scrollToElement(Gallery)" [ngClass]="{'navbar-brand-if-active':currentSection=='Gallery'}" >Gallery</a>
           <a class="navbar-brand" (click)="scrollToElement(About)" [ngClass]="{'navbar-brand-if-active':currentSection=='About'}" >About</a>
           <a class="navbar-brand" (click)="scrollToElement(WooshAnimations)" [ngClass]="{'navbar-brand-if-active':currentSection=='WooshAnimations'}" >WooshAnimations</a>
-          <a class="navbar-brand" (click)="scrollToElement(mustWork)" [ngClass]="{'navbar-brand-if-active':currentSection=='WooshAnimations'}" >WooshAnimations</a>
+          <a class="navbar-brand" (click)="scrollToElement(hulkDialog)" [ngClass]="{'navbar-brand-if-active':currentSection=='WooshAnimations'}" >WooshAnimations</a>
         </ul>
       </div>
     </div>
@@ -38,16 +38,16 @@
     <div class="container">
         <div class="row" style="text-align: center;">
             <div class="col-4">
-                <app-iron-man-float [imgSrc]="'../../../assets/iron-man-1.png'">
+                <app-iron-man-float style="cursor:pointer" (click)="scrollToElement(ironManDialog)" [imgSrc]="'../../../assets/iron-man-1.png'">
                 </app-iron-man-float>
             </div>
             <div class="col-4">
-                <app-spidey-float [imgSrc]="'../../../assets/sp-2.png'">
+                <app-spidey-float style="cursor:pointer" (click)="scrollToElement(spiderManDialog)" [imgSrc]="'../../../assets/sp-2.png'">
                 </app-spidey-float>
             </div>
             <div class="col-4">
               <!-- <app-hulk-float style="cursor:pointer" [imgSrc]="'../../../assets/hulk-float.png'" > -->
-                <app-hulk-float style="cursor:pointer" (click)="scrollToElement(mustWork)" [imgSrc]="'../../../assets/hulk-float.png'">
+                <app-hulk-float style="cursor:pointer" (click)="scrollToElement(hulkDialog)" [imgSrc]="'../../../assets/hulk-float.png'">
                 </app-hulk-float>
             </div>  
         </div>
@@ -64,14 +64,14 @@
   <app-test></app-test>
 </div>
 
-<div>
-  <app-iron-man></app-iron-man>
+<div id="ironManDialog" #ironManDialog>
+  <app-iron-man ></app-iron-man>
 </div>
 
-<div>
+<div id="spiderManDialog" #spiderManDialog>
   <app-spider-man></app-spider-man>
 </div>
 
-<div id="mustWork" #mustWork>
+<div id="hulkDialog" #hulkDialog>
   <app-hulk-dialog *ngIf="hulkDialogBoolean"></app-hulk-dialog>
 </div>

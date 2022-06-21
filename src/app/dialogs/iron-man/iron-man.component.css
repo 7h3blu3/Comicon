@@ -5,7 +5,6 @@
     background-image: url("../../../assets/iron-man-bg.jpg");
 }
 
-
  .wrapper {
     display: grid;
     grid-gap: 10px;
@@ -36,21 +35,44 @@
     max-height: 640px;
     height: 120%; 
     width: 110%;
-    animation: circleAnimation 10s ease-in infinite;
-	  border-radius: 50%;
-
+    animation: leftToRight 10s ease-in infinite;
+	  /* border-radius: 50%; */
   }
 
   .standard-item:nth-child(2) {
-    /* background-image: url('../../../assets/hulk-1.png'); */
-    /* min-height: 200px;*/
+    background-image: url('../../../assets/sp-2.png');
+    min-height: 200px;
+    max-height: 640px;
+    height: 120%; 
+    width: 110%;
+    animation: rightToLeft 10s ease-in infinite 5s;
+  }
+  
+/* 
+  .standard-item:nth-child(3) {
+    background-image: url('../../../assets/hulk-7.png');
+    min-height: 200px;
+    max-height: 640px;
+    height: 120%; 
+    width: 110%;
+    animation: rightToLeft 10s ease-in infinite 5s;
+  } */
+
+  /* .standard-item:nth-child(2) {
+
     
     max-height: 640px; 
     background: linear-gradient(transparent,rgba(45, 129, 255, 0.5),transparent);
-    /* height: 5vh;  */
+    
     width: 110%;
     animation: backgroundFall 10s ease-in infinite;
-  }
+
+    
+  } */
+
+  /* height: 5vh;  */
+    /* background-image: url('../../../assets/hulk-1.png'); */
+    /* min-height: 200px;*/
 
   @keyframes fade-out {
     0%{opacity:0;}
@@ -59,24 +81,51 @@
   }
 
   /* Falling transparent background animation */
-  @keyframes backgroundFall {
+  /* @keyframes backgroundFall {
     0%{height: 5vh}
     50%{height:100vh}
     100%{height: 5vh}
-  }
+  } */
 
   @keyframes circleAnimation {
-    0%{clip-path: polygon(50% 0,50% 0,50% 50%,50% 100%,50% 0,50% 0,50% 100%,50% 100%);}
-    50%{clip-path: polygon(50% 0,0 0,0 100%,50% 100%,50% 0,100% 0,100% 100%,50% 100%);}
-    100%{clip-path: polygon(50% 0,50% 0,50% 50%,50% 100%,50% 0,50% 0,50% 100%,50% 100%);}
+    0%  {clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);}
+    50% {clip-path: polygon(0% 0%,   100% 0, 100% 100%, 0% 100%) ;}
+    100%{clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);}
   }
 
   @keyframes midToSide {
-    0%{clip-path: polygon(50% 0,50% 0,50% 50%,50% 100%,50% 0,50% 0,50% 100%,50% 100%);}
+    0%  {clip-path: polygon(50% 0%, 50% 0, 50% 100%, 50% 100%); }
+    50% {clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0% 100%);}
+    100%{clip-path: polygon(50% 0%, 50% 0, 50% 100%, 50% 100%);}
+    /* 0%{clip-path: polygon(50% 0,50% 0,50% 50%,50% 100%,50% 0,50% 0,50% 100%,50% 100%);}
     50%{clip-path: polygon(50% 0,0 0,0 100%,50% 100%,50% 0,100% 0,100% 100%,50% 100%);}
-    100%{clip-path: polygon(50% 0,50% 0,50% 50%,50% 100%,50% 0,50% 0,50% 100%,50% 100%);}
+    100%{clip-path: polygon(50% 0,50% 0,50% 50%,50% 100%,50% 0,50% 0,50% 100%,50% 100%);} */
   }
 
+  /* Left To Right */
+  /* @keyframes leftToRight {
+    0%  {clip-path: polygon(100% 0%, 100% 0, 100% 100%, 100% 100%);}
+    25% {clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0% 100%);}
+    50% {clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0% 100%);}
+    75%{clip-path: polygon(100% 0%, 100% 0, 100% 100%, 100% 100%);}
+    100%{clip-path: polygon(100% 0%, 100% 0, 100% 100%, 100% 100%);}
+  } */
+  /* Right to Left */
+  /* @keyframes rightToLeft {
+    0%  {clip-path: polygon(0% 0%, 0% 0, 0% 100%, 0% 100%);}
+    25% {clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0% 100%);}
+    50% {clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0% 100%);}
+    75%{clip-path: polygon(0% 0%, 0% 0, 0% 100%, 0% 100%); }
+    100%{clip-path: polygon(0% 0%, 0% 0, 0% 100%, 0% 100%);}
+  }
+
+  @keyframes rightToLeft {
+    0%  {clip-path: polygon(0% 0%, 0% 0, 0% 100%, 0% 100%);}
+    25% {clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0% 100%);}
+    50% {clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0% 100%);}
+    75%{clip-path: polygon(0% 0%, 0% 0, 0% 100%, 0% 100%);}
+    100%{clip-path: polygon(0% 0%, 0% 0, 0% 100%, 0% 100%);}
+  } */
 
 /* 
   .standard-item:nth-child(2) {
@@ -128,15 +177,25 @@
       grid-row: 1 / 50;
       -webkit-clip-path: polygon(0% 4%, 41% 1%, 100% 5%, 96% 40%, 82% 86%, 0% 96%);
       clip-path: polygon(0% 4%, 41% 1%, 100% 5%, 96% 40%, 82% 86%, 0% 96%);
-      /* margin-top: 80px; */
+      margin-top: 80px;
     }
 
     .standard-item:nth-child(2) {
       grid-column: 1 / span 1;
       grid-row: 1 / 50;
       -webkit-clip-path: polygon(0% 4%, 41% 1%, 100% 5%, 96% 40%, 82% 86%, 0% 96%);
-      clip-path: polygon(0% 4%, 41% 1%, 100% 5%, 96% 40%, 82% 86%, 0% 96%);
-      /* margin-top: 80px; */
+      clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);
+      margin-top: 80px;
+
+    }
+
+    .standard-item:nth-child(3) {
+      grid-column: 1 / span 1;
+      grid-row: 1 / 50;
+      -webkit-clip-path: polygon(0% 4%, 41% 1%, 100% 5%, 96% 40%, 82% 86%, 0% 96%);
+      clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);
+      margin-top: 80px;
+
     }
 
     /* .standard-item:nth-child(2) {
