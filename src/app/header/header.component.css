@@ -13,7 +13,7 @@
     animation: shake 0.4s;
   }
 
-  .navbar-brand{
+  .nav-item{
     font-family: Papyrus,fantasy;
     font-style: normal;
     text-transform: uppercase;
@@ -23,11 +23,20 @@
     transition: transform .4s;
   }
 
-  .navbar-brand-if-active{
+  .nav-item-if-active{
     color:#F66200;
   }
 
-  .navbar-brand:hover{
+  .navbar-dark .navbar-nav .nav-link:active {
+    color:#F66200;
+  }
+
+  .navbar .navbar-nav .nav-link.active, 
+  .navbar .navbar-nav .nav-link:hover {
+    color:#F66200;
+  }
+
+  .nav-item:hover{
     color:#F66200;  
     transform: scale(1.15);
   }

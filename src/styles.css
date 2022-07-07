@@ -1,4 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --primary: #F66200;
+  --primary-light: #ff9a57; 
+  --dark:#222;
+  --light:#fff;
+}
+
+/* Scrollbar logic for Chrome */
+body::-webkit-scrollbar {
+  /* width: 0.8em; */
+  background: var(--dark);
+
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border: 0.2em solid var(--primary);
+}
+
+/* Scrollbar logic for Mozila */
+@supports(scrollbar-color: var(--primary) var(--dark)){
+  * {
+    scrollbar-color: var(--primary) var(--dark);
+  }
+}
+
+html {
+/* scroll-padding-top: 20em; */
+}
 
 body {
     /* overflow-x: hidden; */
@@ -7,5 +36,4 @@ body {
     color: black;
   }
 
-html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

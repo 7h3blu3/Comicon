@@ -30,16 +30,16 @@
   }
 
   .standard-item:nth-child(1) {
-    background-image: url('../../../assets/hulk-1.png');
+    background-image: url('../../../assets/iron-man-2.png');
     min-height: 200px;
     max-height: 640px;
     height: 120%; 
     width: 110%;
-    animation: leftToRight 10s ease-in infinite;
+    animation: circlingAnimation 30s ease-in infinite;
 	  /* border-radius: 50%; */
   }
 
-  .standard-item:nth-child(2) {
+  /* .standard-item:nth-child(2) {
     background-image: url('../../../assets/sp-2.png');
     min-height: 200px;
     max-height: 640px;
@@ -47,7 +47,7 @@
     width: 110%;
     animation: rightToLeft 10s ease-in infinite 5s;
   }
-  
+   */
 /* 
   .standard-item:nth-child(3) {
     background-image: url('../../../assets/hulk-7.png');
@@ -91,6 +91,21 @@
     0%  {clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);}
     50% {clip-path: polygon(0% 0%,   100% 0, 100% 100%, 0% 100%) ;}
     100%{clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);}
+  }
+
+  @keyframes circlingAnimation {
+    /* 0%  {clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); opacity:0;} 
+    50% {clip-path: polygon(100% 0%,   100% 100%, 0% 100%, 0% 0%); opacity:1;}
+    100%{clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%); opacity:0;} */
+
+    0%{clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);}
+    50%{clip-path: polygon(100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%, 30% 0%, 70% 0%);}
+    /* 100%{clip-path: polygon(70% 100%, 30% 100%, 0% 70%, 0% 30%, 30% 0%, 70% 0%, 100% 30%, 100% 70%);} */
+
+
+
+    /* 50%{clip-path: polygon(70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%, 30% 0%);} */
+
   }
 
   @keyframes midToSide {
@@ -175,8 +190,7 @@
     .standard-item:nth-child(1) {
       grid-column: 1 / span 1;
       grid-row: 1 / 50;
-      -webkit-clip-path: polygon(0% 4%, 41% 1%, 100% 5%, 96% 40%, 82% 86%, 0% 96%);
-      clip-path: polygon(0% 4%, 41% 1%, 100% 5%, 96% 40%, 82% 86%, 0% 96%);
+      clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
       margin-top: 80px;
     }
 
